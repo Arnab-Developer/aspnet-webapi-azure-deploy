@@ -1,5 +1,7 @@
 # ASP.NET web api azure deploy
 
+![build test deploy](https://github.com/Arnab-Developer/aspnet-webapi-azure-deploy/workflows/build%20test%20deploy/badge.svg)
+
 Deploy ASP.NET web api to azure web app with GitHub action.
 
 Steps:
