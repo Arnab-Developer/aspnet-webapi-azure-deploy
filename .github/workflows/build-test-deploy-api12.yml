@@ -1,0 +1,42 @@
+name: build test deploy api2
+
+on:  
+  push:
+    branches: [ main ]
+
+env:
+  AZURE_WEBAPP_NAME: api2-1002
+  AZURE_WEBAPI2_PACKAGE_PATH: '.'
+
+jobs:
+  build-test-deploy:
+    
+    runs-on: windows-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.101
+    
+    - name: Restore dependencies
+      run: dotnet restore src\AspnetWebapiAzureDeploy.Api2\AspnetWebapiAzureDeploy.Api2.csproj
+    
+    - name: Build
+      run: dotnet build src\AspnetWebapiAzureDeploy.Api2\AspnetWebapiAzureDeploy.Api2.csproj --configuration Release --no-restore
+    
+    - name: Test
+      run: dotnet test test\AspnetWebapiAzureDeploy.Api2Test\AspnetWebapiAzureDeploy.Api2Test.csproj --verbosity normal --configuration Release
+
+    - name: Publish
+      run: dotnet publish src\AspnetWebapiAzureDeploy.Api2\AspnetWebapiAzureDeploy.Api2.csproj --configuration Release -o '${{ env.AZURE_WEBAPI2_PACKAGE_PATH }}/api2'
+
+    - name: 'Deploy to Azure WebApp'
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: ${{ env.AZURE_WEBAPP_NAME }}
+        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+        package: ${{ env.AZURE_WEBAPI2_PACKAGE_PATH }}/api2

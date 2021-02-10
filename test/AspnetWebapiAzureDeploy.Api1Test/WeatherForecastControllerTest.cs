@@ -1,0 +1,25 @@
+using AspnetWebapiAzureDeploy.Api1;
+using AspnetWebapiAzureDeploy.Api1.Controllers;
+using Microsoft.Extensions.Logging;
+using Moq;
+using System.Collections.Generic;
+using System.Linq;
+using Xunit;
+
+namespace AspnetWebapiAzureDeploy.Api1Test
+{
+    public class WeatherForecastControllerTest
+    {
+        [Fact]
+        public void GetTest()
+        {
+            Mock<ILogger<WeatherForecastController>> loggerMock = new();
+            WeatherForecastController weatherForecastController = new(loggerMock.Object);
+
+            IEnumerable<WeatherForecast> weatherForecasts = weatherForecastController.Get();
+
+            Assert.NotNull(weatherForecasts);
+            Assert.Equal(5, weatherForecasts.Count());
+        }
+    }
+}

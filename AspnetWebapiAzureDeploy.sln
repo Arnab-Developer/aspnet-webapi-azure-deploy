@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{64A20D1F-2D46-47B5-8FC2-F15B2EAC414A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{3061A4DA-0CE4-4419-B124-DFA1603DE4C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspnetWebapiAzureDeploy.Api1", "src\AspnetWebapiAzureDeploy.Api1\AspnetWebapiAzureDeploy.Api1.csproj", "{825BDE11-B45F-45B2-BF61-726AC99B23C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspnetWebapiAzureDeploy.Api2", "src\AspnetWebapiAzureDeploy.Api2\AspnetWebapiAzureDeploy.Api2.csproj", "{13069404-A00E-4505-B415-CB3B71F78F6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspnetWebapiAzureDeploy.Api1Test", "test\AspnetWebapiAzureDeploy.Api1Test\AspnetWebapiAzureDeploy.Api1Test.csproj", "{E55F5784-BAB5-4A35-92D7-D80336BC219B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspnetWebapiAzureDeploy.Api2Test", "test\AspnetWebapiAzureDeploy.Api2Test\AspnetWebapiAzureDeploy.Api2Test.csproj", "{DF3349F0-620F-46AF-A33C-300AB82F7D22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspnetWebapiAzureDeploy.WebApp", "src\AspnetWebapiAzureDeploy.WebApp\AspnetWebapiAzureDeploy.WebApp.csproj", "{AD6D30BF-BA58-45FB-8939-2222F438E21A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{825BDE11-B45F-45B2-BF61-726AC99B23C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{825BDE11-B45F-45B2-BF61-726AC99B23C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{825BDE11-B45F-45B2-BF61-726AC99B23C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{825BDE11-B45F-45B2-BF61-726AC99B23C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13069404-A00E-4505-B415-CB3B71F78F6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13069404-A00E-4505-B415-CB3B71F78F6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13069404-A00E-4505-B415-CB3B71F78F6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13069404-A00E-4505-B415-CB3B71F78F6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E55F5784-BAB5-4A35-92D7-D80336BC219B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E55F5784-BAB5-4A35-92D7-D80336BC219B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E55F5784-BAB5-4A35-92D7-D80336BC219B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E55F5784-BAB5-4A35-92D7-D80336BC219B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF3349F0-620F-46AF-A33C-300AB82F7D22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF3349F0-620F-46AF-A33C-300AB82F7D22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF3349F0-620F-46AF-A33C-300AB82F7D22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF3349F0-620F-46AF-A33C-300AB82F7D22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD6D30BF-BA58-45FB-8939-2222F438E21A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD6D30BF-BA58-45FB-8939-2222F438E21A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD6D30BF-BA58-45FB-8939-2222F438E21A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD6D30BF-BA58-45FB-8939-2222F438E21A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{825BDE11-B45F-45B2-BF61-726AC99B23C1} = {64A20D1F-2D46-47B5-8FC2-F15B2EAC414A}
+		{13069404-A00E-4505-B415-CB3B71F78F6D} = {64A20D1F-2D46-47B5-8FC2-F15B2EAC414A}
+		{E55F5784-BAB5-4A35-92D7-D80336BC219B} = {3061A4DA-0CE4-4419-B124-DFA1603DE4C3}
+		{DF3349F0-620F-46AF-A33C-300AB82F7D22} = {3061A4DA-0CE4-4419-B124-DFA1603DE4C3}
+		{AD6D30BF-BA58-45FB-8939-2222F438E21A} = {64A20D1F-2D46-47B5-8FC2-F15B2EAC414A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E8232C07-C2E3-4418-A3CB-C172D4B0F821}
+	EndGlobalSection
+EndGlobal
