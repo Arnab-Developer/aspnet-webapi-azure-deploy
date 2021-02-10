@@ -5,9 +5,9 @@ on:
     branches: [ main ]
 
 env:
-  AZURE_API1_NAME: api1-1002
-  AZURE_API2_NAME: api2-1002
-  AZURE_WEBAPP_NAME: webapp-1002
+  AZURE_API1_NAME: aspnet-webapi-azure-deploy-api11002
+  AZURE_API2_NAME: aspnet-webapi-azure-deploy-api11002
+  AZURE_WEBAPP_NAME: aspnet-webapi-azure-deploy-webapp1002
   PUBLISH_PATH: '/publish'
 
 jobs:
