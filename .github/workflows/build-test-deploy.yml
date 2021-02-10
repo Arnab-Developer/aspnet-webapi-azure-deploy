@@ -1,12 +1,12 @@
-name: build test deploy api2
+name: build test deploy
 
 on:  
   push:
     branches: [ main ]
 
 env:
-  AZURE_WEBAPP_NAME: api2-1002
-  AZURE_WEBAPI2_PACKAGE_PATH: '.'
+  AZURE_WEBAPP_NAME: api1-1002
+  AZURE_WEBAPI1_PACKAGE_PATH: '.'
 
 jobs:
   build-test-deploy:
@@ -31,12 +31,4 @@ jobs:
     - name: Test
       run: dotnet test AspnetWebapiAzure.sln --verbosity normal --configuration Release
 
-    - name: Publish
-      run: dotnet publish src\AspnetWebapiAzureDeploy.Api2\AspnetWebapiAzureDeploy.Api2.csproj --configuration Release -o '${{ env.AZURE_WEBAPI2_PACKAGE_PATH }}/api2'
-
-    - name: 'Deploy to Azure WebApp'
-      uses: azure/webapps-deploy@v2
-      with:
-        app-name: ${{ env.AZURE_WEBAPP_NAME }}
-        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-        package: ${{ env.AZURE_WEBAPI2_PACKAGE_PATH }}/api2
+    
