@@ -26,10 +26,7 @@ jobs:
       run: dotnet restore src\AspnetWebapiAzureDeploy.WebApp\AspnetWebapiAzureDeploy.WebApp.csproj
     
     - name: Build
-      run: dotnet build src\AspnetWebapiAzureDeploy.WebApp\AspnetWebapiAzureDeploy.WebApp.csproj --configuration Release --no-restore
-    
-    - name: Test
-      run: dotnet test test\AspnetWebapiAzureDeploy.WebAppTest\AspnetWebapiAzureDeploy.WebAppTest.csproj --verbosity normal --configuration Release
+      run: dotnet build src\AspnetWebapiAzureDeploy.WebApp\AspnetWebapiAzureDeploy.WebApp.csproj --configuration Release --no-restore    
 
     - name: Publish
       run: dotnet publish src\AspnetWebapiAzureDeploy.WebApp\AspnetWebapiAzureDeploy.WebApp.csproj --configuration Release -o '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/webapp'
