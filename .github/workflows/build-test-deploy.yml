@@ -23,12 +23,12 @@ jobs:
         dotnet-version: 5.0.101
     
     - name: Restore dependencies
-      run: dotnet restore AspnetWebapiAzure.sln
+      run: dotnet restore AspnetWebapiAzureDeploy.sln
     
     - name: Build
-      run: dotnet build AspnetWebapiAzure.sln --configuration Release --no-restore
+      run: dotnet build AspnetWebapiAzureDeploy.sln --configuration Release --no-restore
     
     - name: Test
-      run: dotnet test AspnetWebapiAzure.sln --verbosity normal --configuration Release
+      run: dotnet test AspnetWebapiAzureDeploy.sln --verbosity normal --configuration Release
 
     
