@@ -41,3 +41,24 @@ jobs:
 
     - name: Publish webapp
       run: dotnet publish src\AspnetWebapiAzureDeploy.WebApp\AspnetWebapiAzureDeploy.WebApp.csproj --configuration Release -o '${{ env.PUBLISH_PATH }}/webapp'
+
+    - name: 'Deploy to Azure api1'
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: ${{ env.AZURE_API1_NAME }}
+        publish-profile: ${{ secrets.AZURE_API1_PUBLISH_PROFILE }}
+        package: '${{ env.PUBLISH_PATH }}/api1'
+
+    - name: 'Deploy to Azure api2'
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: ${{ env.AZURE_API2_NAME }}
+        publish-profile: ${{ secrets.AZURE_API2_PUBLISH_PROFILE }}
+        package: '${{ env.PUBLISH_PATH }}/api2'
+
+    - name: 'Deploy to Azure webapp'
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: ${{ env.AZURE_WEBAPP_NAME }}
+        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+        package: '${{ env.PUBLISH_PATH }}/webapp'
