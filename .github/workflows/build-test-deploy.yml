@@ -8,7 +8,7 @@ env:
   AZURE_API1_NAME: api1-1002
   AZURE_API2_NAME: api2-1002
   AZURE_WEBAPP_NAME: webapp-1002
-  PUBLISH_PATH: './publish'
+  PUBLISH_PATH: '/publish'
 
 jobs:
   build-test-deploy:
