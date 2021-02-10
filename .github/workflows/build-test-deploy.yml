@@ -6,7 +6,7 @@ on:
 
 env:
   AZURE_API1_NAME: aspnet-webapi-azure-deploy-api11002
-  AZURE_API2_NAME: aspnet-webapi-azure-deploy-api21002
+  AZURE_API2_NAME: aspnet-webapi-azure-deploy-ap211002
   AZURE_WEBAPP_NAME: aspnet-webapi-azure-deploy-webapp1002
   PUBLISH_PATH: '/publish'
 
