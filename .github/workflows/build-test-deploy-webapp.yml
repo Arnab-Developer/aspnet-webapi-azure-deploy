@@ -23,10 +23,10 @@ jobs:
         dotnet-version: 5.0.101
     
     - name: Restore dependencies
-      run: dotnet restore src\AspnetWebapiAzureDeploy.WebApp\AspnetWebapiAzureDeploy.WebApp.csproj
+      run: dotnet restore AspnetWebapiAzure.sln
     
     - name: Build
-      run: dotnet build src\AspnetWebapiAzureDeploy.WebApp\AspnetWebapiAzureDeploy.WebApp.csproj --configuration Release --no-restore    
+      run: dotnet build AspnetWebapiAzure.sln --configuration Release --no-restore    
 
     - name: Publish
       run: dotnet publish src\AspnetWebapiAzureDeploy.WebApp\AspnetWebapiAzureDeploy.WebApp.csproj --configuration Release -o '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/webapp'

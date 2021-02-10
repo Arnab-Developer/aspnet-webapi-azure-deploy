@@ -23,13 +23,13 @@ jobs:
         dotnet-version: 5.0.101
     
     - name: Restore dependencies
-      run: dotnet restore src\AspnetWebapiAzureDeploy.Api1\AspnetWebapiAzureDeploy.Api1.csproj
+      run: dotnet restore AspnetWebapiAzure.sln
     
     - name: Build
-      run: dotnet build src\AspnetWebapiAzureDeploy.Api1\AspnetWebapiAzureDeploy.Api1.csproj --configuration Release --no-restore
+      run: dotnet build AspnetWebapiAzure.sln --configuration Release --no-restore
     
     - name: Test
-      run: dotnet test test\AspnetWebapiAzureDeploy.Api1Test\AspnetWebapiAzureDeploy.Api1Test.csproj --verbosity normal --configuration Release
+      run: dotnet test AspnetWebapiAzure.sln --verbosity normal --configuration Release
 
     - name: Publish
       run: dotnet publish src\AspnetWebapiAzureDeploy.Api1\AspnetWebapiAzureDeploy.Api1.csproj --configuration Release -o '${{ env.AZURE_WEBAPI1_PACKAGE_PATH }}/api1'
