@@ -5,5 +5,10 @@ namespace AspnetWebapiAzureDeploy.WebApp.Models
         public string RequestId { get; set; }
 
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+
+        public ErrorViewModel()
+        {
+            RequestId = string.Empty;
+        }
     }
 }

@@ -16,5 +16,10 @@ namespace AspnetWebapiAzureDeploy.Api2
 
         [JsonPropertyName("summary")]
         public string Summary { get; set; }
+
+        public WeatherForecast()
+        {
+            Summary = string.Empty;
+        }
     }
 }
