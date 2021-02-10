@@ -12,7 +12,7 @@ Steps:
 - Create three new web apps in Azure for two apis and a web app.
 - Download the publish profiles from Azure web app.
 - Store the publish profile's content to GitHub repository secrets.
-- Create workflows with GitHub action to build, test and deploy.
+- Create workflow with GitHub action to build, test and deploy.
 
 ```
 - name: 'Deploy to Azure WebApp'
