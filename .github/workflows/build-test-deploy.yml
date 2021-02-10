@@ -5,7 +5,9 @@ on:
     branches: [ main ]
 
 env:
-  AZURE_WEBAPP_NAME: api1-1002
+  AZURE_API1_NAME: api1-1002
+  AZURE_API2_NAME: api2-1002
+  AZURE_WEBAPP_NAME: webapp-1002
   PUBLISH_PATH: './publish'
   API1_PUBLISH_PATH: '${{ env.PUBLISH_PATH }}/api1'
   API2_PUBLISH_PATH: '${{ env.PUBLISH_PATH }}/api2'
