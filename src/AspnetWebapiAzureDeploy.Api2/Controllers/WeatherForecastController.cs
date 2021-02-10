@@ -11,8 +11,8 @@ namespace AspnetWebapiAzureDeploy.Api2.Controllers
     {
         private static readonly string[] _summaries = new[]
         {
-            "api2 Freezing", "api2 Bracing", "api2 Chilly", "api2 Cool", "api2 Mild",
-            "api2 Warm", "api2 Balmy", "api2 Hot", "api2 Sweltering", "api2 Scorching"
+            "api2 azure Freezing", "api2 azure Bracing", "api2 azure Chilly", "api2 azure Cool", "api2 azure Mild",
+            "api2 azure Warm", "api2 azure Balmy", "api2 azure Hot", "api2 azure Sweltering", "api2 azure Scorching"
         };
 
         [HttpGet]
