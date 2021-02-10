@@ -5,11 +5,12 @@ Deploy ASP.NET web api to azure web app with GitHub action.
 Steps:
 
 - Create a new solution with two new apis and a web app.
+- Create some tests.
 - Push to GitHub.
-- Create three new web app in Azure for two apis and web app.
+- Create three new web apps in Azure for two apis and a web app.
 - Download the publish profiles from Azure web app.
 - Store the publish profile's content to GitHub repository secrets.
-- Create a workflows with GitHub action to build, test and deploy.
+- Create workflows with GitHub action to build, test and deploy.
 
 ```
 - name: 'Deploy to Azure WebApp'
@@ -24,7 +25,7 @@ Steps:
 
 * .NET 5
 * C# 9
-* xunit for unit testing
+* xUnit for unit testing
 * Visual Studio 2019
 
 ## Contribution
