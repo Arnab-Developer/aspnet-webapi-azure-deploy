@@ -9,9 +9,6 @@ env:
   AZURE_API2_NAME: api2-1002
   AZURE_WEBAPP_NAME: webapp-1002
   PUBLISH_PATH: './publish'
-  API1_PUBLISH_PATH: '${{ env.PUBLISH_PATH }}/api1'
-  API2_PUBLISH_PATH: '${{ env.PUBLISH_PATH }}/api2'
-  WEBAPP_PUBLISH_PATH: '${{ env.PUBLISH_PATH }}/webapp'
 
 jobs:
   build-test-deploy:
@@ -37,10 +34,10 @@ jobs:
       run: dotnet test AspnetWebapiAzureDeploy.sln --verbosity normal --configuration Release
 
     - name: Publish api1
-      run: dotnet publish src\AspnetWebapiAzureDeploy.Api1\AspnetWebapiAzureDeploy.Api1.csproj --configuration Release -o '${{ env.API1_PUBLISH_PATH }}'
+      run: dotnet publish src\AspnetWebapiAzureDeploy.Api1\AspnetWebapiAzureDeploy.Api1.csproj --configuration Release -o '${{ env.PUBLISH_PATH }}/api1'
 
     - name: Publish api2
-      run: dotnet publish src\AspnetWebapiAzureDeploy.Api2\AspnetWebapiAzureDeploy.Api2.csproj --configuration Release -o '${{ env.API2_PUBLISH_PATH }}'
+      run: dotnet publish src\AspnetWebapiAzureDeploy.Api2\AspnetWebapiAzureDeploy.Api2.csproj --configuration Release -o '${{ env.PUBLISH_PATH }}/api2'
 
     - name: Publish webapp
-      run: dotnet publish src\AspnetWebapiAzureDeploy.WebApp\AspnetWebapiAzureDeploy.WebApp.csproj --configuration Release -o '${{ env.WEBAPP_PUBLISH_PATH }}'
+      run: dotnet publish src\AspnetWebapiAzureDeploy.WebApp\AspnetWebapiAzureDeploy.WebApp.csproj --configuration Release -o '${{ env.PUBLISH_PATH }}/webapp'
